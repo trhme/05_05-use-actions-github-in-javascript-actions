@@ -26,7 +26,7 @@ async function main() {
             repo: context.repo.repo,
             issue_number: context.payload.number,
             body: 'Thank Hubbs for submitting a pull request! We will try to review this as soon as we can.'
-        });
+    });
     
     // if this pull request is being opened for the first time,
     // the payload action will be 'opened'. otherwise it will be some
