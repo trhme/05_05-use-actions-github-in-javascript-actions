@@ -21,6 +21,13 @@ async function main() {
         return;
     }
 
+    await octokit.rest.issues.createComment({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            issue_number: context.payload.number,
+            body: 'Thank Hubbs for submitting a pull request! We will try to review this as soon as we can.'
+        });
+    
     // if this pull request is being opened for the first time,
     // the payload action will be 'opened'. otherwise it will be some
     // other pull_request action. Take a look at the Webhook payload
