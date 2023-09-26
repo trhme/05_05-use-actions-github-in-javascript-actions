@@ -10,7 +10,8 @@ jobs:
       - uses: actions/github-script@v6
         with:
           script: |
-            import { GitHubProfileStatus } from 'github-profile-status';
+            //import { GitHubProfileStatus } from 'github-profile-status';
+            const GitHubProfileStatus = require('github-profile-status');
 
             async function main() {
               const profileStatus = new GitHubProfileStatus({
