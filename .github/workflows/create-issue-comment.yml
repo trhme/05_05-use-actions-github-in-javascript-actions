@@ -10,9 +10,28 @@ jobs:
       - uses: actions/github-script@v6
         with:
           script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: '👋 Thanks for reporting!'
-            })
+            import { GitHubProfileStatus } from 'github-profile-status';
+
+            async function main() {
+              const profileStatus = new GitHubProfileStatus({
+                token: process.env.GITHUB_ACCESS_TOKEN,
+              });
+
+              // set your the github profile status
+              await profileStatus.set({
+                emoji: ':wave:',
+                message: 'Hello, world!',
+                limitedAvailability: true,
+              });
+
+              // update your the github profile status
+              await profileStatus.update({
+                message: 'Howdy!',
+              });
+
+              // get your github profile status
+              //const status = await profileStatus.get();
+
+              // clears your github profile status
+              //const success = await profileStatus.clear();
+            }
