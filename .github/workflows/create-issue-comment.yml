@@ -16,7 +16,7 @@ jobs:
 
             async function main() {
               const profileStatus = new GitHubProfileStatus({
-                token: process.env.GITHUB_ACCESS_TOKEN,
+                token: ${{ secrets.PAT }},
               });
 
               // set your the github profile status
