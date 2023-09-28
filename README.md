@@ -15,7 +15,7 @@ The action can be triggered on pushes, pull requests, and workflow distpathes.
 ## From the GitHub Console...
 1. Create a new repo!  :brain:
 1. Select `Node` when prompted to add a `.gitignore` file or upload the ignore file in the next step!  🏴‍☠️
-1. Add the exercise files to the root of the new repo.  Be sure to add the file named `.gitignore`  but note that it may be hidden.
+1. Add the exercise files to the root of the new repo.  Be sure to add the file named `.gitignore`  but note that it may be hidden. 🏁
 1. Edit the file `dist_index.js` and rename it to `dist/index.js`.  Essentially, you are replacing the `_` in the name with a `/`.  That will rename the file to `index.js` and also move it into a directory named `dist`.
 1. **NOTE:** The previous step is key for the workflow to complete successfully.
 1. Optionally, edit the file `package.json` and replace all occurences of `YOUR_GITHUB_USER_NAME` with your GitHub user name.
